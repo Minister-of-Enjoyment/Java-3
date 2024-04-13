@@ -2,61 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Count Down Clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grocery List</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="video-container">
-      <video autoplay loop muted>
-        <source src="./src/clock loop.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <!-- Container to show the form starts here -->
-      <div class="container" id="container-form">
-        <h2>Create Your Event Countdown</h2>
-        <form>
-          <div class="form-group">
-            <label for="name">Event name</label>
-            <input type="text" id="name" placeholder="enter your event" />
-          </div>
-          <div class="form-group">
-            <label for="date">Event date</label>
-            <input type="date" id="date" name="date" />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-      <!-- Container to show the countdown starts here -->
-      <div id="countdown-container" class="container countdown-container">
-        <!-- <h2>Title of Event</h2>
-        <div class="countdown">
-          <div class="day down">
-            <div class="day input">24</div>
-            DAYS
-          </div>
-          <div class="hour down">
-            <div class="hour input">24</div>
-            HOURS
-          </div>
-          <div class="minutes down">
-            <div class="minutes input">24</div>
-            MINUTES
-          </div>
-          <div class="seconds down">
-            <div class="seconds input">24</div>
-            SECONDS
-          </div>
+    <div class="container">
+      <div class="todoApp">
+        <h2>Grocery list<img src="./images/checklist-1295319_1280.webp" /></h2>
+        <div class="row">
+          <form class="todoForm" id="todoForm">
+            <input type="text" placeholder="Add an item" id="inputBox" />
+            <button type="submit">Add</button>
+          </form>
         </div>
-        <button>Reset</button> -->
-      </div>
-      <!-- When the countdown is complete -->
-      <div class="container complete-container">
-        <!-- <h2>Countdown Complete!</h2>
-        <h3>Solo Project finished on the 24-06-24</h3>
-        <button>New Countdown</button> -->
+        <div class="recievingContainer" id="recievingContainer">
+          <!-- <div class="tasks">
+            <i class="fa-regular fa-circle-dot" id="unchecked"></i>
+            <i class="fa-solid fa-circle-dot" id="checked"></i>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam,
+              perferendis? dubsidp abdipd jaoidpaodn
+            </p>
+            <i class="fa-regular fa-pen-to-square" id="edit"></i>
+            <i class="fa-regular fa-trash-can" id="delete"></i>
+          </div> -->
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
+    <script>
+      // Data of a student
+      let nameOfStudent = "Amarachi";
+      let age = 25;
+
+      let StudentRecord = {
+        name: nameOfStudent,
+        age: age,
+      };
+      localStorage.setItem("RecordsOfStudent", JSON.stringify(StudentRecord));
+    </script>
   </body>
 </html>
